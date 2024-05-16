@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ];
     // Función para mostrar los cursos en la página
     function displayCourses() {
+        console.log(courses);//Verifica los datos de los cursos
         var coursesList = document.getElementById('courses-list');
         courses.forEach(function(course) {
             var courseDiv = document.createElement('div');
