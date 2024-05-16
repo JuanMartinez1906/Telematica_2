@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directorio de Cursos</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Directorio de Cursos en Línea</h1>
+    <link rel="stylesheet" href="styles.css">
     <!-- Barra de búsqueda -->
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Buscar cursos...">
@@ -36,13 +36,6 @@
     <div id="courses-list">
         <!-- Aquí se cargarán dinámicamente los cursos -->
     </div>
-
-
-
-
-
-
-
 
     <script src="scripts.js"></script>
 

@@ -52,51 +52,6 @@ function searchCourses() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Datos de ejemplo de cursos
-    var courses = [
-        // Tu array de cursos aquí...
-    ];
-
-    // Función para mostrar los cursos en la página
-    function displayCourses() {
-        var coursesList = document.getElementById('courses-list');
-        courses.forEach(function(course) {
-            var courseDiv = document.createElement('div');
-            courseDiv.classList.add('course');
-            var courseHTML = `
-                <h2>${course.name}</h2>
-                <p>Plataforma: ${course.platform}</p>
-                <a href="${course.link}" target="_blank">Ver Curso</a>
-            `;
-            courseDiv.innerHTML = courseHTML;
-            coursesList.appendChild(courseDiv);
-        });
-    }
-
-    // Llama a la función para mostrar los cursos al cargar la página
-    displayCourses();
-});
-
-function searchCourses() {
-    var input, filter, courses, course, title, i, txtValue;
-    input = document.getElementById('searchInput');
-    filter = input.value.toUpperCase();
-    courses = document.getElementsByClassName('course');
-
-    for (i = 0; i < courses.length; i++) {
-        course = courses[i];
-        title = course.getElementsByTagName('h2')[0];
-        txtValue = title.textContent || title.innerText;
-
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            course.style.display = '';
-        } else {
-            course.style.display = 'none';
-        }
-    }
-}
-
 function filterCourses() {
     var platformFilter = document.getElementById('platform').value;
     var courses = document.getElementsByClassName('course');
